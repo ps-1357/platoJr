@@ -20,14 +20,6 @@ app.use(express.static(`${__dirname}/public`));
 // view engine
 app.set('view engine', 'ejs');
 
-// database connection
-//const dbURI = 'mongodb+srv://platoJr:sVTrNt68SmybwNTo@cluster0.hecxn.mongodb.net/platoJr??retryWrites=true&w=majority';
-//mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-//  .then((con) => {
-//    
-//    console.log('DB connection successful');
-//  })
-//  .catch((err) => console.log(err));
 
 // routes
 app.get('*', checkUser);
