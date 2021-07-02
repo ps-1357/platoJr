@@ -23,9 +23,9 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('*', checkUser);
-//app.get('/', (req, res) => res.render('home'));
+app.get('/', (req, res) => res.render('home'));
 //
-//app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
+app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
 app.use('/api/v1/users', userRoutes);
 app.all('*', (req,res,next) =>{
   next(new AppError(`Can't find ${req.originalUrl} on this server!, 404`));
